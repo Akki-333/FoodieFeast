@@ -1,0 +1,203 @@
+    .navbar-container {
+        width: 100%;
+        padding: 0 20px; /* Optional padding on the sides */
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        background-color: #e7d6d0; /* Light orange background for navbar */
+        padding: 20px 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px; /* Rounded corners */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: darkblue;
+        max-width: 100%; /* Ensure the navbar doesn't exceed the screen width */
+    }
+
+body {
+    margin: 0; /* Remove default body margin */
+}
+
+
+
+.navbar .logo {
+    width: 150px;
+    color: #6e09c2; /* Dark grey logo text */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #4a4a4a; /* Dark grey menu text */
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners for menu items */
+}
+
+.navbar-menu li:nth-child(1) a {
+    color: #FF6F61; /* Unique color for menu item 1 */
+}
+
+.navbar-menu li:nth-child(2) a {
+    color: #6B8E23; /* Unique color for menu item 2 */
+}
+
+.navbar-menu li:nth-child(3) a {
+    color: #4682B4; /* Unique color for menu item 3 */
+}
+
+.navbar-menu li:nth-child(4) a {
+    color: #DA70D6; /* Unique color for menu item 4 */
+}
+
+.navbar-menu li a:hover {
+    color: #FF4C24; /* Change color on hover */
+    background-color: #e0e0e0; /* Light grey background on hover */
+}
+
+.navbar-menu .active a {
+    color: #FFFFFF; /* White color for active menu */
+    background-color: #FF4C24; /* Bright background for active menu */
+    font-style: italic; /* Italic style for active menu */
+    border-radius: 5px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #FF4C24;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-right button {
+    background-color: #FF4C24; /* Bright background for button */
+    font-size: 16px;
+    color: #FFFFFF; /* White button text */
+    border: 1px solid #FF4C24;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right button:hover {
+    background-color: #E03E1D; /* Darker background on hover */
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.navbar-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.navbar-profile-dropdown img {
+    width: 20px;
+}
+
+.navbar-profile-dropdown li:hover {
+    color: #FF4C24; /* Change color on hover */
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #FF4C24;
+    list-style: none;
+}
+
+.navbar-profile hr {
+    background-color: gray;
+    height: 1px;
+    border: none;
+}
+
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .navbar-right {
+        gap: 30px;
+    }
+
+    .navbar-right img {
+        width: 22px;
+    }
+
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+    }
+
+    .navbar-right button {
+        font-size: 15px;
+        padding: 7px 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}
