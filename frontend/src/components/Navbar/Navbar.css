@@ -92,12 +92,12 @@ body {
 }
 
 .navbar-right button {
-    background-color: #FF4C24; /* Bright background for button */
-    font-size: 16px;
+    background-color: #ffcc00; /* Bright background for button */
+    font-size: 23px;
     color: #FFFFFF; /* White button text */
-    border: 1px solid #FF4C24;
+    border: 4.2px solid #eaa104;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
