@@ -8,6 +8,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import FoodDetailPage from './pages/FoodDetailPage/FoodDetailPage';
 import ExploreMenu from './components/ExploreMenu/ExploreMenu';
+import CategoryDetails from './components/CategoryDetails/CategoryDetails';
 import MyOrders from './pages/MyOrders/MyOrders';
 import Verify from './pages/Verify/Verify';
 import { ToastContainer } from 'react-toastify';
@@ -27,6 +28,8 @@ const App = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<PlaceOrder />} />
           <Route path='/myorders' element={<MyOrders />} />
+          <Route path="/ExploreMenu" element={<ExploreMenu />} />
+          <Route path="/CategoryDetails" element={<CategoryDetails />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/CategoryPage' element={<CategoryPage />} />
           <Route path='/FoodDetailPage  ' element={<FoodDetailPage />} />

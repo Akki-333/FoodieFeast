@@ -1,11 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './CategoryPage.css';
-import images from '../images';
+import images from '../images'; // Ensure all necessary images are imported
 
 const CategoryPage = () => {
   const { category } = useParams();
+  const navigate = useNavigate();
 
+  // Food items categorized by sections
   const foodItems = {
     Salad: [
       { name: 'Caesar Salad', description: 'Crisp romaine lettuce with Caesar dressing and croutons.', price: '$8', img: images.caesarSalad },
@@ -73,24 +75,32 @@ const CategoryPage = () => {
     ],
   };
 
-  const items = foodItems[category] || [];
+   // Get the food items for the current category from the params
+   const items = foodItems[category] || [];
 
-  return (
-    <div className='category-page'>
-      <h1>{category} Menu</h1>
-      <div className='food-list'>
-        {items.map((item, index) => (
-          <div key={index} className='food-item'>
-            <img src={item.img} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-            <p>{item.price}</p>
-            <button>Add to Cart</button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default CategoryPage;
+   // Function to handle "View Details" button click
+   const handleFoodClick = (foodName) => {
+     navigate(`/food/${category}/${foodName}`);
+   };
+ 
+   return (
+     <div className="category-page">
+       <h1>{category} Menu</h1>
+       <div className="food-list">
+         {items.map((item, index) => (
+           <div key={index} className="food-item">
+             <img src={item.img} alt={item.name} className="food-item-image" />
+             <h3>{item.name}</h3>
+             <p>{item.description}</p>
+             <p className="item-price">{item.price}</p>
+             <button className="add-to-cart" onClick={() => handleFoodClick(item.name)}>
+               View Details
+             </button>
+           </div>
+         ))}
+       </div>
+     </div>
+   );
+ };
+ 
+ export default CategoryPage;
