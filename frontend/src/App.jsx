@@ -8,7 +8,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import FoodDetailPage from './pages/FoodDetailPage/FoodDetailPage';
 import ExploreMenu from './components/ExploreMenu/ExploreMenu';
-import CategoryDetails from './components/CategoryDetails/CategoryDetails';
+import CategoryDetails from './pages/CategoryDetails/CategoryDetails';
 import MyOrders from './pages/MyOrders/MyOrders';
 import Verify from './pages/Verify/Verify';
 import { ToastContainer } from 'react-toastify';

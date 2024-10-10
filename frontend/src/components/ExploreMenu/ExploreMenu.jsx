@@ -2,13 +2,13 @@ import React, { useContext, useState } from 'react';
 import './ExploreMenu.css';
 import { StoreContext } from '../../Context/StoreContext';
 import { Link } from 'react-router-dom'; // Import Link for navigation
-import CategoryDetails from '../CategoryDetails/CategoryDetails'; // Import the new component
+import CategoryDetails from '../../pages/CategoryDetails/CategoryDetails'; // Import the new component
 
 const ExploreMenu = ({ category, setCategory }) => {
   const { menu_list, addToCart } = useContext(StoreContext);
   const [selectedCategory, setSelectedCategory] = useState(null); // State for selected category
 
-  // Find the items for the selected category
+  // Find the items for the selected category`
   const getCategoryItems = (category) => {
     const menu = menu_list.find(item => item.menu_name === category);
     return menu ? menu.items : []; // Assuming each item has an 'items' property
