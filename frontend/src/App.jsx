@@ -13,6 +13,8 @@ import MyOrders from './pages/MyOrders/MyOrders';
 import Verify from './pages/Verify/Verify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from "../src/login";
+import Sign from "../src/sign";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -33,6 +35,8 @@ const App = () => {
           <Route path='/verify' element={<Verify />} />
           <Route path='/CategoryPage' element={<CategoryPage />} />
           <Route path='/FoodDetailPage  ' element={<FoodDetailPage />} />
+          <Route path='/Login' element ={<Login />}></Route>
+          <Route path='/Sign' element ={<Sign />}></Route>
         </Routes>
       </div>
       <Footer />
