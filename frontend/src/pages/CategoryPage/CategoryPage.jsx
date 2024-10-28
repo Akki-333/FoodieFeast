@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'; // Assuming you're using react-router for navigation
-import mockData from '../../data/mockData'; // Import mock data
 
 const CategoryPage = () => {
   const { category } = useParams(); // Get the category from the URL
